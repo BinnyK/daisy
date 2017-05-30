@@ -5,16 +5,116 @@ const SideBar = (props) => {
     <aside className="column is-2 aside hero is-fullheight is-hidden-mobile">
       <div>
         <div className="uploader has-text-centered">
-          <a className="button">
-            <i className="fa fa-upload"></i>
+          <a className="nav-item" href="../index.html">
+            Daisy Girls
           </a>
         </div>
         <div className="main">
-          <div className="title">Main</div>
-          <a href="#" className="item active"><span className="icon"><i className="fa fa-home"></i></span><span className="name">Flowers</span></a>
-          <a href="#" className="item"><span className="icon"><i className="fa fa-map-marker"></i></span><span className="name">Bouquet</span></a>
-          <a href="#" className="item"><span className="icon"><i className="fa fa-th-list"></i></span><span className="name">Timeline</span></a>
-          <a href="#" className="item"><span className="icon"><i className="fa fa-folder-o"></i></span><span className="name">Folders</span></a>
+          <div className="title">Flowers</div>
+          <a href="#" className="item active">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">All year</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">January</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">February</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">March</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">April</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">May</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">June</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">July</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">August</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">September</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">October</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">November</span>
+          </a>
+          <a href="#" className="item">
+            <span className="icon">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+            </span>
+            <span className="name">December</span>
+          </a>
         </div>
       </div>
     </aside>

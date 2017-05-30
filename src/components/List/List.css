@@ -1,0 +1,12 @@
+.flex-wrap {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list-box {
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
