@@ -11,8 +11,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      flowers: flowers,
+      flowers: flowers
     }
+  }
+
+  filterList(month) {
+    const newList = this.state.flowers.filter(flower => {
+      return flower.availability.includes(month) || flower.availability.includes('year');
+    });
+    this.setState({
+      flowers: newList
+    })
   }
 
   render() {
@@ -20,7 +29,7 @@ class App extends Component {
       <div>
         <Nav />
         <div className="columns">
-          <SideBar />
+          <SideBar filterList={() => this.filterList()} />
           <div className="content column is-10">
             <Header />
             <List flowers={this.state.flowers}/>
