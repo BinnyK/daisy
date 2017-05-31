@@ -64,7 +64,16 @@ const flowers = [
       "jan"
     ],
     url: "http://webneel.com/wallpaper/sites/default/files/images/01-2014/20-flower-wallpaper.preview.jpg"
-  }
+  },
+  {
+    "id": 7,
+    "name": "TESTING",
+    "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
+    "availability": [
+      "mar"
+    ],
+    url: "http://webneel.com/wallpaper/sites/default/files/images/01-2014/20-flower-wallpaper.preview.jpg"
+  },
 ]
 
 export default flowers;

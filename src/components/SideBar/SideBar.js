@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../../actions';
+import months from './months';
 
 class SideBar extends Component {
+
   render() {
     return (
       <aside className="column is-2 aside hero is-fullheight is-hidden-mobile">
@@ -12,116 +17,35 @@ class SideBar extends Component {
           </div>
           <div className="main">
             <div className="title">Flowers</div>
-            <a href="#" className="item active">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">All year</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">January</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">February</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">March</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">April</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">May</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">June</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">July</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">August</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">September</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">October</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">November</span>
-            </a>
-            <a href="#" className="item">
-              <span className="icon">
-                <label className="checkbox">
-                  <input type="checkbox" />
-                </label>
-              </span>
-              <span className="name">December</span>
-            </a>
+            
+            {months.map((month, i) => (
+              <a href="#" className="item" key={i}>
+                <span className="icon">
+                  <label className="checkbox">
+                    <input type="checkbox" onChange={() => this.props.addFilter(month.abbr)} />
+                  </label>
+                </span>
+                <span className="name">{month.name}</span>
+              </a>
+            ))}
+
           </div>
         </div>
       </aside>
-
     )
   }
 }
 
-export default SideBar;
+const mapStateToProps = (state) => {
+  return { 
+    flowers: state.flowers
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SideBar);
+
+

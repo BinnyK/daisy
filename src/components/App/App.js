@@ -5,34 +5,21 @@ import SideBar from '../SideBar/SideBar';
 import List from '../List/List';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import flowers from '../../flowers';
+
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../../actions';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      flowers: flowers
-    }
-  }
-
-  filterList(month) {
-    const newList = this.state.flowers.filter(flower => {
-      return flower.availability.includes(month) || flower.availability.includes('year');
-    });
-    this.setState({
-      flowers: newList
-    })
-  }
-
   render() {
     return (
       <div>
         <Nav />
         <div className="columns">
-          <SideBar filterList={() => this.filterList()} />
+          <SideBar />
           <div className="content column is-10">
             <Header />
-            <List flowers={this.state.flowers}/>
+            <List />
           </div>
         </div>
         <Footer />
@@ -41,4 +28,15 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return { 
+    flowers: state.flowers
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+

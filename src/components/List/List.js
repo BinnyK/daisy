@@ -1,11 +1,18 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../../actions';
+
 import './List.css';
 
 const List = props => {
+
+  const displayFlowers = props.filterArr.length > 0 ? props.filteredFlowers : props.flowers
+
   return (
     <div className="container">
       <div className="columns files flex-wrap">
-        {props.flowers.map((flower, i) => (
+        {displayFlowers.map((flower, i) => (
           <div key={i} className="column list-box">
             <a className="file">
               <div className="image is-3by2">
@@ -21,4 +28,29 @@ const List = props => {
   )
 }
 
-export default List;
+const mapStateToProps = (state) => {
+  const filterQueries = state.filter;
+  return { 
+    filteredFlowers: state.flowers.filter(flower => {
+      for(let i = 0; i < filterQueries.length; i++) {
+        if (flower.availability.includes(filterQueries[0])) {
+          return flower
+        }
+      }
+    }),
+    flowers: state.flowers,
+    filterArr: state.filter
+
+    // filteredFlowers: state.flowers.filter(flower => {
+    //   return filterQueries.forEach(query => {
+    //     return flower.availability.includes(query) || flower.availability.includes('year')
+    //   })
+    // })
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(List);
