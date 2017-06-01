@@ -186,11 +186,15 @@ const flowers = [
   },
   {
     "id": 18,
-    "name": "Freesia",
+    "name": "Achillea",
     "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
     "availability": [
-      "aug",
-      "sep"
+      "jan",
+      "feb",
+      "mar",
+      "apr",
+      "may",
+      "jun"
     ],
     url: "http://webneel.com/wallpaper/sites/default/files/images/01-2014/20-flower-wallpaper.preview.jpg"
   },
@@ -452,7 +456,7 @@ const flowers = [
   },
   {
     "id": 41,
-    "name": "Tulip",
+    "name": "Violet",
     "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
     "availability": [
       "mar",
