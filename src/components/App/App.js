@@ -11,6 +11,17 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../actions';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      search: ''
+    }
+  }
+
+  // updateSearchTerm(searchTerm) {
+  //   this.setState({search: searchTerm})
+  // }
+
   render() {
     return (
       <div>
@@ -18,8 +29,8 @@ class App extends Component {
         <div className="columns">
           <SideBar />
           <div className="content column is-10">
-            <Header />
-            <List />
+            <Header updateSearchTerm={(search) => {this.setState({ search })}}/>
+            <List searchTerm={this.state.search}/>
           </div>
         </div>
         <Footer />

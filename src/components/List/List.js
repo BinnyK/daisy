@@ -7,13 +7,23 @@ import './List.css';
 
 const List = props => {
 
-  const filteredFlowers = (flowers, filters) => {
+  const filterSearchTerm = (flowers, searchTerm) => {
+    if (searchTerm.length > 0) {
+      return flowers.filter(flower => {
+        if (flower.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+          return flower;
+        }
+      })
+    } else {
+      return flowers;
+    }
+  }
 
+  const filteredFlowers = (flowers, filters) => {
     if (filters.length > 0) {
       return flowers.filter(flower => {
         let count = 0;
         for(let i = 0; i < filters.length; i++) {
-          
           if (flower.availability.includes(filters[i])) {
             count += 1;
           } else {
@@ -22,18 +32,20 @@ const List = props => {
           if (count == filters.length) {
             return flower;
           }
-
         }
       })
     } else {
       return flowers;
     }
   }
+  
+  const filteredFlowersList = filteredFlowers(props.flowers, props.filterArr);
+  const outputFlowers = filterSearchTerm(filteredFlowersList, props.searchTerm);
 
   return (
     <div className="container">
       <div className="columns files flex-wrap">
-        {filteredFlowers(props.flowers, props.filterArr).map((flower, i) => (
+        {outputFlowers.map((flower, i) => (
           <div key={i} className="column list-box">
             <a className="file">
               <div className="image is-3by2">
