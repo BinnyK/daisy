@@ -13,3 +13,11 @@ export function removeFilter(month) {
   }
 }
 
+// export function updateFilteredFlowers(flowers, list) {
+//   return {
+//     type: 'UPDATE_FILTERED_FLOWERS',
+//     flowers,
+//     list,
+
+//   }
+// }

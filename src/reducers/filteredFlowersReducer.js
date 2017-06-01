@@ -1,7 +1,24 @@
+// import INIT_FLOWER_STATE from '../flowers';
 
-function filteredFlowersReducer(state = [], action) {
-  console.log("FROM FILTERED LSIT THIS JUST RUNS EERY TIME", state);
-  return state;
-}
+// function filterFlowersList(state = INIT_FLOWER_STATE, action) {
+  
+//   switch (action.type) {
+    
+//     case 'UPDATE_FILTERED_FLOWERS':
 
-export default filteredFlowersReducer;
+//       const newFlowers = action.flowers.filter(flower => {
+//         for(let i = 0; i < action.list.length; i++) {
+//           if (flower.availability.includes(action.list[0])) {
+//             return flower
+//           }
+//         }
+//       })
+
+//       return [...state, newFlowers];
+//     default:
+//       return state;
+//   }
+
+// }
+
+// export default filterFlowersList;

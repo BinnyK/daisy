@@ -7,12 +7,33 @@ import './List.css';
 
 const List = props => {
 
-  const displayFlowers = props.filterArr.length > 0 ? props.filteredFlowers : props.flowers
+  const filteredFlowers = (flowers, filters) => {
+
+    if (filters.length > 0) {
+      return flowers.filter(flower => {
+        let count = 0;
+        for(let i = 0; i < filters.length; i++) {
+          
+          if (flower.availability.includes(filters[i])) {
+            count += 1;
+          } else {
+            count = 0;
+          }
+          if (count == filters.length) {
+            return flower;
+          }
+
+        }
+      })
+    } else {
+      return flowers;
+    }
+  }
 
   return (
     <div className="container">
       <div className="columns files flex-wrap">
-        {displayFlowers.map((flower, i) => (
+        {filteredFlowers(props.flowers, props.filterArr).map((flower, i) => (
           <div key={i} className="column list-box">
             <a className="file">
               <div className="image is-3by2">
@@ -29,23 +50,10 @@ const List = props => {
 }
 
 const mapStateToProps = (state) => {
-  const filterQueries = state.filter;
   return { 
-    filteredFlowers: state.flowers.filter(flower => {
-      for(let i = 0; i < filterQueries.length; i++) {
-        if (flower.availability.includes(filterQueries[0])) {
-          return flower
-        }
-      }
-    }),
     flowers: state.flowers,
     filterArr: state.filter
-
-    // filteredFlowers: state.flowers.filter(flower => {
-    //   return filterQueries.forEach(query => {
-    //     return flower.availability.includes(query) || flower.availability.includes('year')
-    //   })
-    // })
+    // filteredFlowers: state.filteredFlowers
   }
 }
 

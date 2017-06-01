@@ -22,7 +22,9 @@ class SideBar extends Component {
               <a href="#" className="item" key={i}>
                 <span className="icon">
                   <label className="checkbox">
-                    <input type="checkbox" onChange={() => this.props.addFilter(month.abbr)} />
+                    <input type="checkbox" onChange={() => {
+                      this.props.addFilter(month.abbr);
+                    }} />
                   </label>
                 </span>
                 <span className="name">{month.name}</span>
@@ -38,7 +40,8 @@ class SideBar extends Component {
 
 const mapStateToProps = (state) => {
   return { 
-    flowers: state.flowers
+    flowers: state.flowers,
+    filterArr: state.filter
   }
 }
 
@@ -47,5 +50,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SideBar);
-
-

@@ -1,6 +1,7 @@
 
-function filter(state = [], action) {
+function filterList(state = [], action) {
   switch (action.type) {
+    
     case 'TOGGLE_FILTER':
       if (!state.includes(action.month)) {
         console.log("ADDING FILTER");
@@ -23,4 +24,4 @@ function filter(state = [], action) {
   }
 }
 
-export default filter;
+export default filterList;
