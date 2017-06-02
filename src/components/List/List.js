@@ -42,7 +42,7 @@ const List = props => {
   const filteredFlowersList = filteredFlowers(props.flowers, props.filterArr);
   const outputFlowers = filterSearchTerm(filteredFlowersList, props.searchTerm);
 
-  // <div className="timestamp">{flower.availability.join(" ")}</div>
+
 
   return (
     <div className="columns">
@@ -52,7 +52,7 @@ const List = props => {
             <a>
               <img className="flower-image" src={flower.url} alt={flower.name}/>
               <div className="name">{flower.name}</div>
-              <div className="timestamp">Testing</div>
+              <div className="timestamp">{flower.availability.join(" ")}</div>
             </a>
           </div>
         ))}
