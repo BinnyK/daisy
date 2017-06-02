@@ -42,17 +42,17 @@ const List = props => {
   const filteredFlowersList = filteredFlowers(props.flowers, props.filterArr);
   const outputFlowers = filterSearchTerm(filteredFlowersList, props.searchTerm);
 
+  // <div className="timestamp">{flower.availability.join(" ")}</div>
+
   return (
-    <div className="container">
-      <div className="columns files flex-wrap">
+    <div className="columns">
+      <div className="column flex-wrap">
         {outputFlowers.map((flower, i) => (
-          <div key={i} className="column list-box">
-            <a className="file">
-              <div className="image is-3by2">
-                <img src={flower.url} alt={flower.name}/>
-              </div>
+          <div key={i} className="list-box">
+            <a>
+              <img className="flower-image" src={flower.url} alt={flower.name}/>
               <div className="name">{flower.name}</div>
-              <div className="timestamp">{flower.availability.join(" ")}</div>
+              <div className="timestamp">Testing</div>
             </a>
           </div>
         ))}

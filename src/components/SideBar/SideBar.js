@@ -8,9 +8,8 @@ class SideBar extends Component {
 
   render() {
     return (
-      <aside className="column is-2 aside hero is-fullheight is-hidden-mobile">
         <div>
-          <div className="uploader has-text-centered">
+          <div className="header has-text-centered">
             <a className="nav-item" href="../index.html">
               Daisy Girls
             </a>
@@ -33,7 +32,6 @@ class SideBar extends Component {
 
           </div>
         </div>
-      </aside>
     )
   }
 }

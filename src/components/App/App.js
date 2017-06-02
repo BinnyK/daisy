@@ -27,8 +27,12 @@ class App extends Component {
       <div>
         <Nav />
         <div className="columns">
-          <SideBar />
-          <div className="content column is-10">
+          <div className="column aside">
+            <aside className="menu aside is-fullheight is-hidden-mobile">  
+              <SideBar />
+            </aside>
+          </div>  
+          <div className="column">
             <Header updateSearchTerm={(search) => {this.setState({ search })}}/>
             <List searchTerm={this.state.search}/>
           </div>

@@ -1,12 +1,18 @@
 .flex-wrap {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  
 }
 
 .list-box {
   box-sizing: border-box;
-  overflow: hidden;
-  max-width: 300px;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  max-width: 200px;
+  width: 200px;
+  min-width: 200px;
+  margin: 20px; 
+}
+
+.flower-image {
+  width: 200px;
 }
