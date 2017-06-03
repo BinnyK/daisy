@@ -15,7 +15,7 @@ class SideBar extends Component {
             </a>
           </div>
           <div className="main">
-            <div className="title">Flowers</div>
+            <div className="title">Availability</div>
             
             {months.map((month, i) => (
               <a href="#" className="item" key={i}>

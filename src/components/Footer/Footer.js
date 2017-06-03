@@ -7,7 +7,7 @@ const Footer = (props) => {
       <div className="container">
         <div className="has-text-centered">
           <p>
-            <strong>Daisy Girls</strong> by <a href="https://binnyk.github.io">BinnyK</a>
+            <strong>Flowers guide</strong> by <a href="https://binnyk.github.io">BinnyK</a>
           </p>
           <p>
             Code

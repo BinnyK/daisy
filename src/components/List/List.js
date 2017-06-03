@@ -47,12 +47,12 @@ const List = props => {
   return (
     <div className="columns">
       <div className="column flex-wrap">
-        {outputFlowers.map((flower, i) => (
-          <div key={i} className="list-box">
+        {outputFlowers.map((flower) => (
+          <div key={flower.name} className="list-box">
             <a>
               <img className="flower-image" src={flower.url} alt={flower.name}/>
               <div className="name">{flower.name}</div>
-              <div className="timestamp">{flower.availability.join(" ")}</div>
+              <div className="timestamp">{flower.months}</div>
             </a>
           </div>
         ))}
