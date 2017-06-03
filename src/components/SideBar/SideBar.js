@@ -3,16 +3,22 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../actions';
 import months from './months';
+import './SideBar.css';
 
 class SideBar extends Component {
 
   render() {
     return (
-        <div>
+        <div id="sideBar">
           <div className="header has-text-centered">
-            <a className="nav-item" href="../index.html">
-              DAISY GIRLS
+            <a className="nav-item">
+              DAISY
             </a>
+          </div>
+          <div className="field search-form">
+            <p className="control search-input">
+              <input className="input" type="text" placeholder="Search flower" onChange={(e) => this.props.updateSearchTerm(e.target.value)} />
+            </p>
           </div>
           <div className="main">
             <div className="title">Availability</div>

@@ -46,7 +46,7 @@ const List = props => {
 
   return (
     <div className="columns">
-      <div className="column flex-wrap">
+      <div className="column flex-wrap main-content">
         {outputFlowers.map((flower) => (
           <div key={flower.name} className="list-box box">
             <a>

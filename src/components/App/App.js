@@ -24,11 +24,13 @@ class App extends Component {
         <div className="columns main-body">
           <div className="column aside">
             <aside className="menu aside is-fullheight is-hidden-mobile">  
-              <SideBar />
+              <SideBar updateSearchTerm={(search) => {this.setState({ search })}} />
             </aside>
           </div>  
           <div className="column">
-            <Header updateSearchTerm={(search) => {this.setState({ search })}}/>
+            <Header
+              updateSearchTerm={(search) => {this.setState({ search })}} 
+            />
             <List searchTerm={this.state.search}/>
           </div>
         </div>

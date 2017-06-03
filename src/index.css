@@ -29,12 +29,13 @@ body {
 }
 
 .aside {
-  background-color: #232B2D;
+  background-color: #3F4652;
   min-width: 250px;
-  max-width: 300px
+  max-width: 300px;
+
 }
 .aside .header {
-  background-color: #5DA1C6;
+  background-color: #232B2D;
   height: 95px;
   /*margin: 0 -12px;*/
   padding: 25px 30px;
@@ -42,6 +43,8 @@ body {
 
 .header a {
   color: white;
+  font-size: 18px;
+  border: 1px solid white;
 }
 
 /*.aside .uploader .button {
