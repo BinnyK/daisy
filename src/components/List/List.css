@@ -11,15 +11,15 @@
   min-width: 200px;
   margin: 10px 10px;
   padding: 20px;*/
-  width: 280px;
+  /*width: 280px;*/
   margin: 10px 10px;
 }
 
 .list-box a {
-  color: #363636;
+  color: #4a4a4a;
 }
 
 .flower-image {
-  width: 240px;
-  height: 125px;
+  width: 200px;
+  height: 130px;
 }

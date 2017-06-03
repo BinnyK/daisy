@@ -55,7 +55,9 @@ const List = props => {
                 <h1>{flower.name}</h1>
               </div>
             </a>
-              <div className="timestamp">{flower.months}</div>
+              <div className="timestamp">
+                <small>{flower.months}</small>
+              </div>
 
           </div>
         ))}

@@ -21,7 +21,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Nav />
         <div className="columns main-body">
           <div className="column aside">
             <aside className="menu aside is-fullheight is-hidden-mobile">  
