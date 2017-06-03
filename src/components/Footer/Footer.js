@@ -1,4 +1,5 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = (props) => {
   return(
@@ -6,15 +7,14 @@ const Footer = (props) => {
       <div className="container">
         <div className="has-text-centered">
           <p>
-            <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+            <strong>Daisy Girls</strong> by <a href="https://binnyk.github.io">BinnyK</a>
           </p>
           <p>
-            <a className="icon" href="https://github.com/jgthms/bulma">
-              <i className="fa fa-github"></i>
-            </a>
+            Code
           </p>
+          <a className="icon" href="https://github.com/jgthms/bulma">
+            <i className="fa fa-github"></i>
+          </a>
         </div>
       </div>
     </footer>
