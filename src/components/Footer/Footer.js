@@ -12,7 +12,7 @@ const Footer = (props) => {
           <p>
             Code
           </p>
-          <a className="icon" href="https://github.com/jgthms/bulma">
+          <a className="icon" href="https://github.com/BinnyK/daisy">
             <i className="fa fa-github"></i>
           </a>
         </div>

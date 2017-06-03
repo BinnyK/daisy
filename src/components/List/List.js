@@ -48,12 +48,15 @@ const List = props => {
     <div className="columns">
       <div className="column flex-wrap">
         {outputFlowers.map((flower) => (
-          <div key={flower.name} className="list-box">
+          <div key={flower.name} className="list-box box">
             <a>
               <img className="flower-image" src={flower.url} alt={flower.name}/>
-              <div className="name">{flower.name}</div>
-              <div className="timestamp">{flower.months}</div>
+              <div className="name">
+                <h1>{flower.name}</h1>
+              </div>
             </a>
+              <div className="timestamp">{flower.months}</div>
+
           </div>
         ))}
       </div>

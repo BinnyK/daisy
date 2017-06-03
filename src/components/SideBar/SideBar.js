@@ -11,7 +11,7 @@ class SideBar extends Component {
         <div>
           <div className="header has-text-centered">
             <a className="nav-item" href="../index.html">
-              Daisy Girls
+              DAISY GIRLS
             </a>
           </div>
           <div className="main">

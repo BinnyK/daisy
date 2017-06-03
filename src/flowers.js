@@ -509,6 +509,97 @@ const flowers = [
       "aug"
     ],
     url: "http://absfreepic.com/absolutely_free_photos/small_photos/beautiful-violet-flowers-5456x3632_91795.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Protea",
+    "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
+    "months": "Sep - Mar",
+    "availability": [
+      "sep",
+      "oct",
+      "nov",
+      "dec",
+      "jan",
+      "feb",
+      "mar"
+    ],
+    url: "http://www.proteaflora.com.au/images/plants/specialpinkice2.jpg"
+  },
+  {
+    "id": 43,
+    "name": "King Protea",
+    "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
+    "months": "Sep - Mar",
+    "availability": [
+      "sep",
+      "oct",
+      "nov",
+      "dec",
+      "jan",
+      "feb",
+      "mar"
+    ],
+    url: "http://www.proteaflora.com.au/images/plants/kingpink3.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Christmas Bush",
+    "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
+    "months": "Nov - Dec",
+    "availability": [
+      "nov",
+      "dec"
+    ],
+    url: "https://static1.squarespace.com/static/5414f5e5e4b002912c7c34e5/t/5668d5b11115e015efb8c45b/1449711552235/Christmas+Bush.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Banksia",
+    "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
+    "months": "NEEDS CHECK",
+    "availability": [
+      "aug",
+      "sep",
+      "oct",
+      "nov",
+      "dec"
+    ],
+    url: "http://gb.fotolibra.com/images/previews/74815-red-banksia-flower-wa-australia.jpeg"
+  },
+  {
+    "id": 46,
+    "name": "Red Gum",
+    "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
+    "months": "NEEDS CHECK",
+    "availability": [
+      "aug",
+      "sep",
+      "oct",
+      "nov",
+      "dec"
+    ],
+    url: "http://www.burkesbackyard.com.au/wp-content/uploads/2013/09/Red-flowering-Gums.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Kangaroo Paw",
+    "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
+    "months": "All year",
+    "availability": [
+      "year"
+    ],
+    url: "http://www.dirtgirls.com.au/wp-content/uploads/sites/2/2016/04/kangaroo-paw.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Yellow Buttons",
+    "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
+    "months": "All year",
+    "availability": [
+      "year"
+    ],
+    url: "http://www.bgpa.wa.gov.au/images/horticulture/images/plant_of_the_month/chrysocephalum_apiculatum_flowers_d_blumer.jpg"
   }
 
 ]

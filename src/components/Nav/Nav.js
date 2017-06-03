@@ -6,8 +6,8 @@ const Nav = (props) => {
     <nav className="nav is-dark has-shadow" id="top">
       <div className="container">
         <div className="nav-left">
-          <a className="nav-item" href="../index.html">
-            Daisy Girls
+          <a className="nav-item is-hidden-tablet" href="../index.html">
+            DAISY GIRLS
           </a>
         </div>
         <span className="nav-toggle">
