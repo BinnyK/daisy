@@ -28,3 +28,16 @@
   width: 200px;
   height: 130px;
 }
+
+@media (max-width: 768px) {
+  .flex-wrap {
+    margin-top: 20px;
+  }  
+}
+
+@media (max-width: 568px) {
+  .flower-image {
+    width: 230px;
+    height: 150px;
+  }
+}

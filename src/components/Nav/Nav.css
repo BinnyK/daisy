@@ -1,0 +1,16 @@
+.nav {
+  height: 100px;
+  background-color: #232B2D;
+  padding: 25px 25px;
+}
+
+.nav a:hover {
+  background-color: white;
+  color: #232B2D;
+}
+
+.nav a {
+  color: white;
+  font-size: 18px;
+  border: 3px solid white;
+}

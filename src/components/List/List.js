@@ -49,16 +49,13 @@ const List = props => {
       <div className="column flex-wrap main-content">
         {outputFlowers.map((flower) => (
           <div key={flower.name} className="list-box box">
-            <a>
-              <img className="flower-image" src={flower.url} alt={flower.name}/>
-              <div className="name">
-                <h1>{flower.name}</h1>
-              </div>
-            </a>
-              <div className="timestamp">
-                <small>{flower.months}</small>
-              </div>
-
+            <img className="flower-image" src={flower.url} alt={flower.name}/>
+            <div className="name">
+              <h1>{flower.name}</h1>
+            </div>
+            <div className="timestamp">
+              <small>{flower.months}</small>
+            </div>
           </div>
         ))}
       </div>

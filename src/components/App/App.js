@@ -26,7 +26,10 @@ class App extends Component {
             <aside className="menu aside is-fullheight is-hidden-mobile">  
               <SideBar updateSearchTerm={(search) => {this.setState({ search })}} />
             </aside>
-          </div>  
+          </div>
+          <div className="is-hidden-tablet">
+            <Nav />
+          </div>
           <div className="column">
             <Header
               updateSearchTerm={(search) => {this.setState({ search })}} 

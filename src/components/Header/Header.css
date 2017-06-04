@@ -1,8 +1,22 @@
-.search-form {
-  margin: 50px auto;
+
+
+.search-form.field {
+  margin: 0 auto;
+  margin-top: 40px;
   width: 300px;
 }
 
 .search-input {
   width: 290px;
+  margin:0 auto;
+}
+
+@media (max-width: 768px) {
+
+  .search-form.field {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 300px;
+  }
+
 }

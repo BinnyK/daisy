@@ -12,7 +12,7 @@ class SideBar extends Component {
         <div id="sideBar">
           <div className="header has-text-centered">
             <a className="nav-item">
-              DAISY
+              SEASONAL PICKS
             </a>
           </div>
           <div className="field search-form">
@@ -21,7 +21,7 @@ class SideBar extends Component {
             </p>
           </div>
           <div className="main">
-            <div className="title">Availability</div>
+            <div className="title">Seasonal Availability</div>
             
             {months.map((month, i) => (
               <a href="#" className="item" key={i}>

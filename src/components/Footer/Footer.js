@@ -3,20 +3,13 @@ import './Footer.css';
 
 const Footer = (props) => {
   return(
-    <footer className="footer">
-      <div className="container">
-        <div className="has-text-centered">
-          <p>
-            <strong>Flowers guide</strong> by <a href="https://binnyk.github.io">BinnyK</a>
-          </p>
-          <p>
-            Code
-          </p>
-          <a className="icon" href="https://github.com/BinnyK/daisy">
-            <i className="fa fa-github"></i>
-          </a>
-        </div>
-      </div>
+    <footer className="footer has-text-centered">
+      <p className="footer-logo">
+        <a>SEASONAL PICKS</a> 
+      </p>  
+      <p className="has-text-centered">
+        <a className="binnyk" href="https://binnyk.github.io">BinnyK</a>
+      </p>
     </footer>
   )
 }

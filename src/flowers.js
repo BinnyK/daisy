@@ -557,13 +557,14 @@ const flowers = [
     "id": 45,
     "name": "Banksia",
     "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
-    "months": "NEEDS CHECK",
+    "months": "Jan - June",
     "availability": [
-      "aug",
-      "sep",
-      "oct",
-      "nov",
-      "dec"
+      "jan",
+      "feb",
+      "mar",
+      "apr",
+      "may",
+      "jun"
     ],
     url: "http://gb.fotolibra.com/images/previews/74815-red-banksia-flower-wa-australia.jpeg"
   },
@@ -571,12 +572,11 @@ const flowers = [
     "id": 46,
     "name": "Red Gum",
     "desc": "Calla Lilies are extremely popular with style gurus for their sculptural elegant shape.The most popular colour shades are the vibrant canary yellow and the tangerine orange tones.",
-    "months": "NEEDS CHECK",
+    "months": "Nov - Feb",
     "availability": [
-      "aug",
-      "sep",
-      "oct",
       "nov",
+      "dec",
+      "jan",
       "dec"
     ],
     url: "http://www.burkesbackyard.com.au/wp-content/uploads/2013/09/Red-flowering-Gums.jpg"

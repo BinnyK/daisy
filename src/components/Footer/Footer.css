@@ -1,7 +1,41 @@
-footer.footer p {
-  margin-bottom: 20px;
-}
 
 .footer {
-  padding-bottom: 48px;
+  padding: 40px;
+  background-color: #232B2D;
+}
+
+/*.footer-logo-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #232B2D;
+  height: 45px;
+}*/
+
+.footer-logo a:hover {
+  background-color: white;
+  color: #232B2D;
+}
+
+.footer-logo {
+  box-sizing: border-box;
+  
+  font-size: 18px;
+  border: 3px solid white;
+  width: 220px;
+  margin: 0 auto;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+}
+
+.footer-logo a {
+  color: white;
+}
+
+.binnyk {
+  color: white;
+}
+
+.binnyk:hover {
+  color: #F2B32B;
 }
