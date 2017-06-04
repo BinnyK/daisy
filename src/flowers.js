@@ -566,7 +566,7 @@ const flowers = [
       "may",
       "jun"
     ],
-    url: "http://gb.fotolibra.com/images/previews/74815-red-banksia-flower-wa-australia.jpeg"
+    url: "https://www.murdoch.edu.au/images/photos/flora/album/7.jpg"
   },
   {
     "id": 46,

@@ -23,17 +23,18 @@ class SideBar extends Component {
           <div className="main">
             <div className="title">Seasonal Availability</div>
             
-            {months.map((month, i) => (
-              <a href="#" className="item" key={i}>
-                <span className="icon">
-                  <label className="checkbox">
-                    <input type="checkbox" onChange={() => {
+            {months.map((month) => (
+              <div className="field" key={month.name}>
+                <p className="control">
+                  <label className="checkbox" >
+                    <input className="checkbox-month" type="checkbox" onChange={() => {
                       this.props.addFilter(month.abbr);
                     }} />
+                    {month.name}
                   </label>
-                </span>
-                <span className="name">{month.name}</span>
-              </a>
+                </p>
+              </div>
+              
             ))}
 
           </div>

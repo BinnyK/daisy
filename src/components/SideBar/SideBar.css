@@ -3,3 +3,24 @@
   margin: 0 auto;
 }
 
+.control {
+  color: #aaa;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.checkbox:hover {
+  color: white;
+}
+
+.field .control label.checkbox input {
+  margin-right: 15px;
+}
+
+.main .field {
+  margin-bottom: 20px;
+}
+
+#sideBar .title {
+  color: #aaa;
+}
