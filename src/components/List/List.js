@@ -24,7 +24,7 @@ const List = props => {
       return flowers.filter(flower => {
         let count = 0;
         for(let i = 0; i < filters.length; i++) {
-          if (flower.availability.includes(filters[i])) {
+          if (flower.availability.includes(filters[i]) || flower.availability.includes("year")) {
             count += 1;
           } else {
             count = 0;
