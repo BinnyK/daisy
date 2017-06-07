@@ -2,25 +2,33 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../actions';
-
+import R from 'ramda';
 import './List.css';
 
 const List = props => {
 
-  const filterSearchTerm = (flowers, searchTerm) => {
-    if (searchTerm.length > 0) {
-      return flowers.filter(flower => {
-        if (flower.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-          return flower;
-        }
-      })
-    } else {
-      return flowers;
-    }
+  // checkFlowerName :: BOOL -> returns true if flowerName contains searchTerm
+  const checkFlowerName = (flowerName, searchTerm) => {
+    return R.contains(searchTerm, flowerName)
   }
 
+  // filterByName :: Array -> returns array of flowers that match name & searchterm
+  const filterByName = (flowers, searchTerm) => {
+    return flowers.filter(flower => {
+      if (checkFlowerName(flower.name.toLowerCase(), searchTerm.toLowerCase())) {
+        return flower;
+      }
+    })
+  }
+
+  // filterSearchTerm :: Array -> If empty returns flowers, otherwise returns filtered flowers
+  const filterSearchTerm = (flowers, searchTerm) => {
+    return R.isEmpty(searchTerm) ? flowers : filterByName(flowers, searchTerm)
+  }
+
+
   const filteredFlowers = (flowers, filters) => {
-    if (filters.length > 0) {
+    if (!R.isEmpty(filters)) {
       return flowers.filter(flower => {
         let count = 0;
         for(let i = 0; i < filters.length; i++) {
