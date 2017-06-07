@@ -19,36 +19,29 @@ const List = props => {
         return flower;
       }
     })
-  }
+  }  
 
-  // filterSearchTerm :: Array -> If empty returns flowers, otherwise returns filtered flowers
-  const filterSearchTerm = (flowers, searchTerm) => {
+  // filterBySearch :: Array -> If empty returns flowers, otherwise returns filtered flowers
+  const filterBySearch = (flowers, searchTerm) => {
     return R.isEmpty(searchTerm) ? flowers : filterByName(flowers, searchTerm)
   }
 
+  // checkMonthExist :: BOOL -> returns true if 
+  const checkMonthExist = (months, flowerMonths) => months.every(elem => flowerMonths.indexOf(elem) > -1)
 
-  const filteredFlowers = (flowers, filters) => {
-    if (!R.isEmpty(filters)) {
-      return flowers.filter(flower => {
-        let count = 0;
-        for(let i = 0; i < filters.length; i++) {
-          if (flower.availability.includes(filters[i]) || flower.availability.includes("year")) {
-            count += 1;
-          } else {
-            count = 0;
-          }
-          if (count == filters.length) {
-            return flower;
-          }
-        }
-      })
-    } else {
-      return flowers;
-    }
+  // filteredFlowers :: Array -> returns filtered list of flowers based on month availability
+  const filteredFlowers = (flowers, months) => {
+    return flowers.filter(flower => {
+      if (checkMonthExist(months, flower.availability) || 
+          checkMonthExist(['year'], flower.availability)
+      ) {
+        return flower;
+      }
+    })
   }
   
   const filteredFlowersList = filteredFlowers(props.flowers, props.filterArr);
-  const outputFlowers = filterSearchTerm(filteredFlowersList, props.searchTerm);
+  const outputFlowers = filterBySearch(filteredFlowersList, props.searchTerm);
 
   return (
     <div className="columns">
