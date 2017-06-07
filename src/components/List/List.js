@@ -42,8 +42,6 @@ const List = props => {
   const filteredFlowersList = filteredFlowers(props.flowers, props.filterArr);
   const outputFlowers = filterSearchTerm(filteredFlowersList, props.searchTerm);
 
-
-
   return (
     <div className="columns">
       <div className="column flex-wrap main-content">

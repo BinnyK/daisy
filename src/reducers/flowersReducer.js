@@ -1,4 +1,3 @@
-// import { FILTER_FLOWERS } from '../actions';
 import INIT_FLOWER_STATE from '../flowers';
 
 function flowers(state = INIT_FLOWER_STATE, action) {
