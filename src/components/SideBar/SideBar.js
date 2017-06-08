@@ -28,7 +28,7 @@ class SideBar extends Component {
                 <p className="control">
                   <label className="checkbox" >
                     <input className="checkbox-month" type="checkbox" onChange={() => {
-                      this.props.addFilter(month.abbr);
+                      this.props.toggleFilter(month.abbr);
                     }} />
                     {month.name}
                   </label>
