@@ -1,5 +1,5 @@
 # Seasonal Picks
-![Heroku Demo](https://seasonalpicks.herokuapp.com/)
+[Heroku Demo](https://seasonalpicks.herokuapp.com/)
 
 - A tool for searching and filtering through flowers by seasonal availability.
 
